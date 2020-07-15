@@ -25,6 +25,7 @@ if (fs.existsSync('./.gitslave')) {
 
     for (let key in projectPairs) {
       metaJson.projects[key] = projectPairs[key];
+      metaJson.branches[key] = 'master';
     }
 
     const metaString = getMetaFile.format(metaJson);
